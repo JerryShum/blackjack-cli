@@ -1,6 +1,6 @@
+from functions.greeting import greeting
 def main():
-    print("Hello from blackjack-cli!")
-
-
+    greeting()
+    
 if __name__ == "__main__":
     main()
