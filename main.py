@@ -12,14 +12,14 @@ def main():
     while True:
         
         #@ Take user input for dealer and player cards
-        dealer_cards = input(Fore.CYAN + "Dealer Cards: " + Fore.RESET)
-        formatted_dealer = format_and_check(dealer_cards)
+        dealer_card = input(Fore.CYAN + "Dealer Card (The card that the dealer shows): " + Fore.RESET)
+        formatted_dealer = format_and_check(dealer_card, dealer=True)
         if not formatted_dealer:
             continue
         
         
-        player_cards = input(Fore.CYAN + "Player Cards: " + Fore.RESET)
-        formatted_player = format_and_check(player_cards)
+        player_cards = input(Fore.CYAN + "Player Cards (The cards that the player has): " + Fore.RESET)
+        formatted_player = format_and_check(player_cards, dealer=False)
         if not formatted_player:
             continue
         
