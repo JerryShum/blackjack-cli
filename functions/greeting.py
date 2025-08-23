@@ -24,6 +24,8 @@ def greeting():
     if user_input == "start":
         print(Fore.YELLOW + "-------------------------------------------------------------------------")
         print(Fore.GREEN + "Great! Let's begin.")
+        print(Fore.GREEN + "Please enter your cards in the format 'A, K, Q, J, 10, 9, 8, 7, 6, 5, 4, 3, 2'")
+        print(Fore.GREEN + "For example, if you have an Ace and a King, you would enter 'A, K'")
         print(Fore.YELLOW + "-------------------------------------------------------------------------")
     else:
         print(Fore.RED + "Invalid input. Please type 'start' to begin.")
