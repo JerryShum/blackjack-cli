@@ -49,6 +49,5 @@ def soft_map(total_soft, total_dealer):
     
     chart_index = soft_total_map[total_soft]
     dealer_index = dealer_map[total_dealer]
-    print(chart_index, dealer_index)
     
     return soft_hands_strategy_chart[chart_index][dealer_index]
