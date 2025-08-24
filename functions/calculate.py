@@ -4,6 +4,7 @@ from functions.calc_funcs.hard_map import hard_map
 
 def calculate(dealer_card, player_cards):
     
+    print(Fore.YELLOW + "-------------------------------------------------------------------------")
     print(Fore.CYAN + "Thinking..." + Fore.RESET)
     
 
@@ -43,7 +44,6 @@ def calculate(dealer_card, player_cards):
     #! Check for blackjack (multiple cards)
     #@ Checks for blackjack with ace = 1
     if total_player == 21:
-        print("Blackjack! with an ace = 1" )
         return ("W")
     
             
@@ -56,7 +56,6 @@ def calculate(dealer_card, player_cards):
         
         #@ Checks for blackjack with ace = 11
         if total_soft == 21:
-            print("Blackjack! with an ace = 11" )
             return ("W")
         
     #! Map soft total 
