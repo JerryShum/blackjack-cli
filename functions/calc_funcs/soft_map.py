@@ -1,5 +1,12 @@
 def soft_map(total_soft, total_dealer):
     
+    #! Basic Strategy
+    # S = Stand
+    # H = Hit
+    # D = Double Down otherwise Hit
+    # G = Double Down otherwise Stand
+        
+    
     #@ Strategy for soft hands (aces counted as 1 or 11)
     soft_hands_strategy_chart = [
         # Dealer up cards
