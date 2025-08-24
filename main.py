@@ -3,6 +3,7 @@ from colorama import Fore
 from functions.greeting import greeting
 from functions.calculate import calculate
 from functions.format_and_check import format_and_check
+from functions.action_handler import action_handler
 def main():
     
     #! Greeting CLI message
@@ -25,8 +26,9 @@ def main():
         
         #! Call the calculate function
         action = calculate(formatted_dealer, formatted_player)
-        print(action)
-        
+        print(Fore.YELLOW + "-------------------------------------------------------------------------")
+        print(action_handler(action))
+                
     
 if __name__ == "__main__":
     main()
