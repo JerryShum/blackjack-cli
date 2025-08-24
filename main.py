@@ -24,7 +24,9 @@ def main():
             continue
         
         #! Call the calculate function
-        calculate(formatted_dealer, formatted_player)
+        action = calculate(formatted_dealer, formatted_player)
+        print(action)
+        
     
 if __name__ == "__main__":
     main()

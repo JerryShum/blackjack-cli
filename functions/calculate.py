@@ -39,47 +39,39 @@ def calculate(dealer_card, player_cards):
         
     #@ Detect if player has an ace (soft hand handling)
     player_has_ace = "A" in player_cards
+        
+    #! Check for blackjack (multiple cards)
+    #@ Checks for blackjack with ace = 1
+    if total_player == 21:
+        print("Blackjack! with an ace = 1" )
+        return ("W")
     
-    #@ Check for 2 card blackjack
-    if player_has_ace and len(player_cards) == 2:
-        if total_player + 10 == 21:
-            print("BLACKJACK")
             
     ## Calculate soft hand
     if player_has_ace:
         # soft total = total_player + 10 if total_player is less than 21 else its just the same as total_player
         # also handles edge cases of 2+ aces (only adds +10 once)
         total_soft = total_player + 10 if total_player + 10 <= 21 else None
-        print("SOFT TOTAL: ")
-        print(total_soft)
+
+        
+        #@ Checks for blackjack with ace = 11
+        if total_soft == 21:
+            print("Blackjack! with an ace = 11" )
+            return ("W")
         
     #! Map soft total 
-    
     if total_soft and total_soft >= 13:
         action = soft_map(total_soft, total_dealer)
-        print(f"Recommended action: {action}")
+        return action
     elif total_soft and total_soft <= 12:
         #@ If soft total is less than 13, map to hard total
         action = hard_map(total_soft, total_dealer)
-        print(f"Recommended action: {action}")
+        return action
     else:
         #@ If no soft total, map to hard total
         action = hard_map(total_player, total_dealer)
-        print(f"Recommended action: {action}")
-        
+        return action
 
-
-        
-        
-
-    
-    #! Print totals
-    print(Fore.CYAN + "Dealer Total: " + Fore.RESET, total_dealer)
-    print(Fore.CYAN + "Player Total: " + Fore.RESET, total_player)
-    
-    #! Check for blackjack
-    if total_dealer == 21 and total_player == 21:
-        print(Fore.YELLOW + "Blackjack! You win!" + Fore.RESET)
     
     
     
