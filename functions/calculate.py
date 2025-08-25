@@ -6,7 +6,6 @@ def calculate(dealer_card, player_cards):
     
     print(Fore.YELLOW + "-------------------------------------------------------------------------")
     print(Fore.CYAN + "Thinking..." + Fore.RESET)
-    print("PLAYER CARDS:", player_cards)
     
 
     #! Card Values
@@ -38,8 +37,16 @@ def calculate(dealer_card, player_cards):
         total_dealer += card_values[card.upper()]
     for card in player_cards:
         total_player += card_values[card.upper()]
-        
-    print("PLAYER TOTAL", total_player)    
+    
+    print(Fore.MAGENTA + "DEALER TOTAL: ", total_dealer, Fore.RESET)        
+    print(Fore.MAGENTA + "PLAYER TOTAL: ", total_player, Fore.RESET)    
+    
+    #! If player busts, return L
+    if total_player > 21:
+        #@ If player total is over 21, they lose the game
+        return "L"
+    
+    # ---
     
     #@ Detect if player has an ace (soft hand handling)
     player_has_ace = "A" in player_cards
@@ -60,6 +67,7 @@ def calculate(dealer_card, player_cards):
         #@ Checks for blackjack with ace = 11
         if total_soft == 21:
             return ("W")
+        
         
     #! Map soft total 
     if total_soft and total_soft >= 13:

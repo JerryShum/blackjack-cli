@@ -64,8 +64,5 @@ def hard_map(total_player, total_dealer):
 
     dealer_index = dealer_map[total_dealer]
     
-    print(chart_index, dealer_index)
-    print(hard_hands_strategy_chart[chart_index][dealer_index])
-    
     
     return hard_hands_strategy_chart[chart_index][dealer_index]
