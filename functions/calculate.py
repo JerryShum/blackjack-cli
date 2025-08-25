@@ -6,6 +6,7 @@ def calculate(dealer_card, player_cards):
     
     print(Fore.YELLOW + "-------------------------------------------------------------------------")
     print(Fore.CYAN + "Thinking..." + Fore.RESET)
+    print("PLAYER CARDS:", player_cards)
     
 
     #! Card Values
@@ -38,6 +39,8 @@ def calculate(dealer_card, player_cards):
     for card in player_cards:
         total_player += card_values[card.upper()]
         
+    print("PLAYER TOTAL", total_player)    
+    
     #@ Detect if player has an ace (soft hand handling)
     player_has_ace = "A" in player_cards
         
