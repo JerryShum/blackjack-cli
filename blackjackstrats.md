@@ -54,9 +54,3 @@ Here are the general rules for making decisions based on your hand and the deale
    -  **7s** against a dealer's 2-7.
 
 <hr>
-
-### Using a Strategy Chart
-
-A strategy chart can be a helpful visual aid. It typically lists your hand total on one axis and the dealer's upcard on the other. You can find charts online that summarize these rules in a grid format, making it easier to reference during play.
-
-By following these guidelines, you can improve your chances of winning at blackjack. Would you like to know more about specific scenarios or strategies?
