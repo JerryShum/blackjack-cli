@@ -33,7 +33,8 @@ def main():
             print(action_handler(action))
             
             if action == "H":
-                wants_hit_again = input(Fore.GREEN + "🤔 Since we suggested you to hit again, Would you like to input your new card? (y/n)" + Fore.RESET)
+                print(Fore.YELLOW + "-------------------------------------------------------------------------")
+                wants_hit_again = input(Fore.GREEN + "🤔 Since we suggested you to hit again, Would you like to input your new card? (y/n): " + Fore.RESET)
                 if wants_hit_again.lower() == "y":
                     #@ Player wants to hit -> take new card 
                     
@@ -51,13 +52,16 @@ def main():
                     ## Set the "player_cards" variable to the new player hand
                     formatted_player = reformat_player_hand
                     
-                elif wants_hit_again.lower=="n":
+                elif wants_hit_again.lower()=="n":
                     #@ Player does not want to hit again -> break and end the game/round
                     break
                 else:
                     #@ Invalid input -> reprompt
+                    print(Fore.YELLOW + "-------------------------------------------------------------------------")
+                    print(Fore.RED + "Invalid input. Please type 'y' or 'n'." + Fore.RESET)
                     continue
-                    
+            elif action == "L":
+                break
             else:
                 print(Fore.YELLOW + "-------------------------------------------------------------------------")
                 print(Fore.GREEN + "🤓🙏 Good luck on your hand! Thanks for using this tool." + Fore.RESET)
@@ -66,7 +70,7 @@ def main():
         
         #! Ask the user if they want to play again
         print(Fore.YELLOW + "-------------------------------------------------------------------------")
-        wants_to_play_again = input(Fore.GREEN + "🤔 Would you like to start a new round? (y/n)" + Fore.RESET)
+        wants_to_play_again = input(Fore.GREEN + "🤔 Would you like to start a new round? (y/n): " + Fore.RESET)
         
         if wants_to_play_again.lower() == "y":
             print(Fore.YELLOW + "-------------------------------------------------------------------------")
@@ -75,6 +79,7 @@ def main():
         elif wants_to_play_again.lower() == "n":
             print(Fore.YELLOW + "-------------------------------------------------------------------------")
             print(Fore.GREEN + "😁 Thank you for your time and for using this tool. Have a great day!" + Fore.RESET)   
+            break;
                 
     
 if __name__ == "__main__":
