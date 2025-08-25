@@ -4,8 +4,8 @@ def action_handler(action):
     action_map = {
         "H": Fore.MAGENTA + "Hit",
         "S": Fore.MAGENTA +"Stand",
-        "D": Fore.MAGENTA +"Double Down",
-        "G": Fore.MAGENTA +"Double Down",
+        "D": Fore.MAGENTA +"Double Down if allowed, otherwise Hit",
+        "G": Fore.MAGENTA +"Double Down if allowed, otherwise Stand",
         "W": Fore.MAGENTA +"Blackjack",
         "L" : Fore.MAGENTA +"Lose"
     }
