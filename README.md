@@ -4,11 +4,11 @@ A command-line tool for practicing and using **Basic Blackjack strategy**. Enter
 
 ## Features 📊
 
-* Validates player and dealer card input
-* Suggests optimal Blackjack actions based on strategy rules
-* Supports repeated **Hit** cycles, recalculating the best move each time
-* Continuous rounds until you choose to quit
-* Clean and colorful CLI interface using `colorama`
+-  Validates player and dealer card input
+-  Suggests optimal Blackjack actions based on strategy rules
+-  Supports repeated **Hit** cycles, recalculating the best move each time
+-  Continuous rounds until you choose to quit
+-  Clean and colorful CLI interface using `colorama`
 
 ## Installation 📦
 
@@ -45,13 +45,10 @@ Suggested Action: Hit
 
 ## Roadmap 🗺
 
-* Add automated unit tests
-* Expand support for special rules (e.g., Splits)
-* Improve error handling for unexpected input
-* Add strategy table reference in documentation
-
+-  Expand support for special rules (e.g., Splits)
+-  Improve error handling for unexpected input
+-  Add strategy table reference in documentation
 
 ## License
 
 This project is open-source under the MIT License.
-
